@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Home</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div id="sidebar" class="sidebar">
+
+<button class="menu-btn"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+<div class="menu-items">
+
+<a href="/">🏠 Halaman Utama</a>
+
+<a href="/pengujian">📥 Pengujian</a>
+
+<a href="/pembuat">👨‍💻 Info Pembuat</a>
+
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="title">
+
+KLASIFIKASI CITRA WILAYAH PERKOTAAN
+MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK
+
+</div>
+
+<div class="card">
+
+<h2>Tentang Sistem</h2>
+
+<p>
+Sistem ini merupakan implementasi metode
+Convolutional Neural Network (CNN)
+dengan arsitektur EfficientNet-B2 untuk
+melakukan klasifikasi citra wilayah perkotaan
+secara otomatis. Sistem mampu mengenali
+kategori wilayah komersial, pemukiman,
+dan ruang terbuka hijau berdasarkan citra
+digital yang diunggah oleh pengguna.
+</p>
+
+<ul>
+
+<li>🏢 Wilayah Komersial</li>
+
+<li>🏠 Wilayah Pemukiman</li>
+
+<li>🌳 Ruang Terbuka Hijau</li>
+
+</ul>
+
+</div>
+
+<div class="row">
+
+<div class="col">
+
+<div class="card">
+
+<h1>🧠</h1>
+
+<h2>Deep Learning</h2>
+
+<p>
+Menggunakan metode Convolutional
+Neural Network (CNN) untuk melakukan
+ekstraksi fitur dan klasifikasi citra
+secara otomatis.
+</p>
+
+</div>
+
+</div>
+
+<div class="col">
+
+<div class="card">
+
+<h1>🚀</h1>
+
+<h2>EfficientNet-B2</h2>
+
+<p>
+Memanfaatkan arsitektur EfficientNet-B2
+yang mampu menghasilkan performa
+klasifikasi yang baik dengan jumlah
+parameter yang efisien.
+</p>
+
+</div>
+
+</div>
+
+<div class="col">
+
+<div class="card">
+
+<h1>📊</h1>
+
+<h2>Analisis Citra</h2>
+
+<p>
+Menampilkan hasil klasifikasi,
+confidence score, probabilitas
+setiap kelas, serta informasi
+tingkat risiko kebakaran berdasarkan
+kategori wilayah.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("sidebar")
+.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+
+</html>
