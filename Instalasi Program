@@ -1,0 +1,147 @@
+# Klasifikasi Citra Wilayah Perkotaan Menggunakan Convolutional Neural Network (CNN) dengan Arsitektur EfficientNet-B2
+
+## Deskripsi
+
+Repository ini berisi source code, dataset, data uji (data_test), model hasil pelatihan, aplikasi dalam bentuk file **.exe**, serta dokumen pendukung skripsi yang digunakan untuk mengklasifikasikan citra wilayah perkotaan menggunakan metode **Convolutional Neural Network (CNN)** dengan arsitektur **EfficientNet-B2**.
+
+Sistem dapat mengklasifikasikan citra ke dalam tiga kategori, yaitu:
+
+- Komersial
+- Pemukiman
+- Ruang Terbuka Hijau
+
+---
+
+## Struktur Repository
+
+```
+Achmad_Skripsi/
+│
+├── Program/
+│   ├── data_test/
+│   ├── dataset/
+│   ├── static/
+│   ├── templates/
+│   ├── app.py
+│   ├── training.py
+│   ├── app.spec
+│   ├── best_model.keras
+│   ├── model.keras
+│   ├── requirements.txt
+│
+├── app/
+│   ├── app.exe
+│   └── _internal/
+│
+├── Buku Manual Program.pdf
+├── Cara Instalasi.pdf
+│
+└── README.md
+```
+
+---
+
+## Persyaratan Sistem
+
+- Sistem Operasi Windows 10 atau Windows 11.
+- Python 3.10.11 atau versi yang sesuai (apabila menjalankan melalui source code).
+- Library yang terdapat pada file **requirements.txt**.
+
+---
+
+## Cara Menjalankan Aplikasi (.exe)
+
+Repository ini telah menyediakan folder **app** yang berisi file **app.exe**, sehingga pengguna tidak perlu membangun ulang aplikasi menggunakan PyInstaller.
+
+Langkah-langkah menjalankan aplikasi:
+
+1. Download atau clone repository ini.
+2. Buka folder **app**.
+3. Jalankan file **app.exe**.
+4. Jangan memindahkan file **app.exe** dari folder **app**, karena aplikasi memerlukan folder **_internal** agar dapat berjalan dengan baik.
+5. Apabila muncul peringatan **Microsoft Defender SmartScreen**, klik **More info**, kemudian pilih **Run anyway**.
+6. Tunggu beberapa saat hingga aplikasi dijalankan.
+7. Browser akan terbuka secara otomatis dan aplikasi siap digunakan.
+
+## Cara Menjalankan Program Melalui Source Code
+
+Apabila ingin menjalankan aplikasi menggunakan source code Python, lakukan langkah-langkah berikut.
+
+1. Download atau clone repository ini.
+2. Buka folder **Program** menggunakan Command Prompt atau Terminal.
+3. Install seluruh library yang dibutuhkan dengan perintah berikut.
+
+```terminal
+pip install -r requirements.txt
+```
+
+4. Setelah proses instalasi selesai, jalankan aplikasi menggunakan perintah berikut.
+
+```terminal
+python app.py
+```
+
+5. Setelah aplikasi berhasil dijalankan, buka browser dan akses alamat berikut.
+
+```
+http://127.0.0.1:5000
+```
+
+atau gunakan alamat localhost yang ditampilkan pada Terminal.
+
+---
+
+## Membangun Ulang Aplikasi (.exe)
+
+Apabila ingin membuat ulang aplikasi dalam bentuk file **.exe**, buka Command Prompt atau Terminal pada folder **Program**, kemudian jalankan perintah berikut.
+
+```terminal
+pyinstaller --onedir --add-data "templates;templates" --add-data "static;static" --add-data "best_model.keras;." app.py
+```
+
+Setelah proses build selesai, PyInstaller akan menghasilkan folder **dist** yang berisi file **app.exe** beserta folder **_internal**. Folder tersebut dapat diganti namanya menjadi **app** agar lebih mudah digunakan dan didistribusikan.
+
+---
+
+## Melatih Model
+
+Apabila ingin melakukan pelatihan ulang model, buka Command Prompt atau Terminal pada folder **Program**, kemudian jalankan perintah berikut.
+
+```terminal
+python training.py
+```
+
+Model hasil pelatihan akan disimpan sebagai **model.keras**, sedangkan aplikasi menggunakan **best_model.keras** sebagai model utama dalam proses klasifikasi.
+
+---
+
+## Dataset
+
+Folder **dataset** berisi data citra yang digunakan dalam proses pelatihan model yang terdiri dari tiga kategori, yaitu:
+
+- Komersial
+- Pemukiman
+- Ruang Terbuka Hijau
+
+Folder **data_test** berisi data uji yang digunakan untuk melakukan pengujian model klasifikasi.
+
+---
+
+## Dokumentasi
+
+Repository ini juga dilengkapi dengan dokumen berikut.
+
+- Buku Manual Program
+- Dokumen Cara Instalasi
+
+---
+
+## Penulis
+
+**Achmad Najamudin Anwar**
+
+**NIM : 531590047**
+
+Program Studi Teknik Informatika
+
+Universitas Tarumanagara
