@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Info Pembuat</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div id="sidebar" class="sidebar">
+
+<button class="menu-btn"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+<div class="menu-items">
+
+<a href="/">🏠 Halaman Utama</a>
+
+<a href="/pengujian">📥 Pengujian</a>
+
+<a href="/pembuat">👨‍💻 Info Pembuat</a>
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="content">
+
+<div class="title">
+
+KLASIFIKASI CITRA WILAYAH PERKOTAAN
+MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK
+DENGAN ARSITEKTUR EFFICIENTNET-B2
+</div>
+
+<div class="card"
+style="text-align:center;">
+
+<div class="avatar"></div>
+
+<br>
+
+<h1>
+Achmad Najamudin Anwar
+</h1>
+
+<h3>
+NIM : 535190047
+</h3>
+
+<p
+style="font-size:18px;
+line-height:1.8;">
+
+Mahasiswa Program Studi Informatika
+Universitas Tarumanagara yang mengembangkan
+sistem klasifikasi citra wilayah perkotaan
+menggunakan metode Convolutional Neural Network (CNN)
+dengan arsitektur EfficientNet-B2.
+
+</p>
+
+<p
+style="font-size:18px;
+line-height:1.8;">
+
+Penelitian ini bertujuan untuk membantu proses
+identifikasi karakteristik wilayah perkotaan
+secara otomatis ke dalam kategori wilayah
+komersial, pemukiman, dan ruang terbuka hijau.
+
+</p>
+
+<p
+style="font-size:18px;
+line-height:1.8;">
+
+Website ini dibangun menggunakan framework Flask
+sebagai media implementasi model CNN sehingga
+pengguna dapat melakukan klasifikasi citra
+secara mudah melalui antarmuka web.
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("sidebar")
+.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+
+</html>
